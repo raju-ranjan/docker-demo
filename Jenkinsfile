@@ -5,6 +5,9 @@ pipeline {
     dockerImage = ''
   }
   agent any
+  triggers {
+        pollSCM('* * * * *')
+    }
  tools {nodejs "nodejs" }
   stages {
     stage('Cloning Git') {
