@@ -43,7 +43,7 @@ pipeline {
       steps{
          script {
             docker.withRegistry( '', registryCredential ) {
-            sh 'docker run --name rajudevops05/canada-docker-webapp:21'
+            sh 'docker run -i rajudevops05/canada-docker-webapp:22'
           }
         }
       }
