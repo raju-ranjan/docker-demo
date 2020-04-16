@@ -43,7 +43,7 @@ pipeline {
       steps{
          script {
             docker.withRegistry( '', registryCredential ) {
-            sh 'docker run -it -p 3000:3000 rajudevops05/canada-docker-webapp:$BUILD_NUMBER'
+            sh 'docker run -itd -p 3000:3000 rajudevops05/canada-docker-webapp:$BUILD_NUMBER'
           }
         }
       }
