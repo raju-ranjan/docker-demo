@@ -39,6 +39,15 @@ pipeline {
         }
       }
     }
+	 stage('Run Image') {
+      steps{
+         script {
+            docker.withRegistry( '', registryCredential ) {
+            sh 'docker run --name rajudevops05/canada-docker-webapp:21'
+          }
+        }
+      }
+    }
    
   }
 }
